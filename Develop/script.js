@@ -1,6 +1,57 @@
 // Assignment code here
 
 
+//Setting up variables for password
+var lowerCaseCharacter=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var upperCaseCharacter=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var numberCharacter=['1','2','3','4','5','6','7','8','9','0'];
+var specialCharacter='!#$%&()*+,-./:;<=>?@[\]^_`{|}~';
+
+//get random character function
+var getRandomLower = function(){
+  return lowerCaseCharacter[Math.floor(Math.random()*lowerCaseCharacter.length)];
+}
+console.log (getRandomLower());
+
+var getRandomUpper = function(){
+  return upperCaseCharacter[Math.floor(Math.random()*upperCaseCharacter.length)];
+}
+console.log (getRandomUpper());
+
+var getRandomNumber = function(){
+  return numberCharacter[Math.floor(Math.random()*numberCharacter.length)];
+}
+console.log (getRandomNumber());
+
+var getRandomSpecial = function(){
+  return specialCharacter[Math.floor(Math.random()*specialCharacter.length)];
+}
+console.log (getRandomSpecial());
+
+//Prompt to customize password
+var generatePassword = function(){
+  var passLength = window.prompt ("How long would your password be? Please pick a number between 8-128");
+  passLength = parseInt (passLength);
+
+  //Check number selected to see if within valid range
+  if
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
