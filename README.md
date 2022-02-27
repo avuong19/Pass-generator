@@ -21,5 +21,6 @@ https://avuong19.github.io/Pass-generator/
 
 
 ## How to use my page:
-![](Untitled_ Feb 26, 2022 10_10 PM.GIF)
 
+
+![Untitled_ Feb 26, 2022 10_10 PM](https://user-images.githubusercontent.com/85915124/155868062-4aec79b7-9a2f-4752-a621-396c04c1e66b.gif)
