@@ -5,7 +5,7 @@
 var lowerCaseCharacter=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var upperCaseCharacter=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 var numberCharacter=['1','2','3','4','5','6','7','8','9','0'];
-var specialCharacter='!#$%&()*+,-./:;<=>?@[\]^_`{|}~';
+var specialCharacter="!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
 //get random character function
 var getRandomLower = function(){
@@ -31,7 +31,8 @@ console.log (getRandomSpecial());
 //Prompt to customize password
 var generatePassword = function(){
   
-  var finalPassword;
+  var finalPasswordChar=" ";
+  var finalPassword ="";
 
   var passLength = window.prompt ("How long would your password be? Please pick a number between 8-128");
   passLength = parseInt (passLength);
@@ -48,45 +49,38 @@ var generatePassword = function(){
     var confirmNumber = confirm ("Do you want number in your password?");
     var confirmSpecial = confirm ("Do you want special character in your password?");
       if(confirmLower|| confirmUpper|| confirmNumber|| confirmSpecial ){
+        for(i = 0; i<passLength;i++){
         if (confirmLower){
-          finalPassword= finalPassword+ getRandomLower;
+          finalPasswordChar= finalPasswordChar+ getRandomLower();
         }
         if (confirmUpper){
-          finalPassword=finalPassword+ getRandomUpper;
+          finalPasswordChar=finalPasswordChar+ getRandomUpper();
         }
         if (confirmNumber){
-          finalPassword=finalPassword+getRandomNumber;
+          finalPasswordChar=finalPasswordChar+getRandomNumber();
         }
         if (confirmSpecial){
-          finalPassword=finalPassword+getRandomSpecial;
+          finalPasswordChar=finalPasswordChar+getRandomSpecial();
         }
-      }
+      }}
       else{
         window.alert ("Please pick at least one criteria for your password. Try again please");
         generatePassword();
       }
-
-
-
-
+    
+  }
+   //pick random character from finalPassChar
+   var getFinalPassword = function(){
+    return finalPasswordChar[Math.floor(Math.random()*finalPasswordChar.length)];
+  }
+  //generate correct desired password length
+  for(j=0;j<passLength;j++){
+    finalPassword=finalPassword+getFinalPassword();
 
   }
   
+  return finalPassword;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Get references to the #generate element
