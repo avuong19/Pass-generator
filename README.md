@@ -17,5 +17,9 @@ WHEN the password is generated</br>
 THEN the password is either displayed in an alert or written to the page</br>
 
 ## Link to my page:
+https://avuong19.github.io/Pass-generator/
+
 
 ## How to use my page:
+![](Untitled_ Feb 26, 2022 10_10 PM.GIF)
+
